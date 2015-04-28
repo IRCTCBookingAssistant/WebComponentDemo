@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web component demo</title>
+</head>
+<body>
+
+<h1>Web Component Demo</h1>
+    <br/>
+Custom Elements <br/>
+    <x-foo></x-foo>
+    <br/>
+    <br/>
+    custom Elements derived from button<br/>
+    <x-foo-button></x-foo-button>
+    <br/>    <br/>
+
+<script src="node_modules/webcomponents.js/webcomponents.js"></script>
+<script>
+    var XFooPrototype = Object.create(HTMLElement.prototype);
+    XFooPrototype.createdCallback = function() {
+      this.textContent = "I'm an x-foo!";
+    };
+
+    XFooPrototype.foo = function() {
+      console.log('foo() called');
+    };
+
+    var XFoo = document.registerElement('x-foo', {
+      prototype: XFooPrototype
+    });
+
+    var XFooButtonPrototype = Object.create(HTMLButtonElement.prototype);
+    XFooButtonPrototype.createdCallback = function() {
+      this.textContent = "I'm an x-foo button!";
+    };
+
+    var XFooButton = document.registerElement('x-foo-button', {
+      prototype: XFooButtonPrototype,
+      extends: 'button'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "WebComponentDemo",
+  "version": "1.0.0",
+  "description": "Web component demo",
+  "main": "index.html",
+  "dependencies": {
+    "webcomponents.js": "^0.6.0"
+  },
+  "devDependencies": {
+    "webcomponents.js": "^0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IRCTCBookingAssistant/WebComponentDemo"
+  },
+  "keywords": [
+    "Webcomponents"
+  ],
+  "author": "IRCTCBookingAssistant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IRCTCBookingAssistant/WebComponentDemo/issues"
+  },
+  "homepage": "https://github.com/IRCTCBookingAssistant/WebComponentDemo"
+}
