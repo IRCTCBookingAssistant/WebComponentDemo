@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web component demo</title>
+    <link rel="import" href="../Step2WebComponent/WebComponent1.html" id="comp1">
+</head>
+<body>
+
+<h1>Web Component Demo</h1>
+<br/>
+<clients>
+    <companyname-client>
+        <name>James Davidson</name>
+        <addressInfo>40th NE, Park Ave., NJ. USA</addressInfo>
+    </companyname-client>
+    <companyname-client>
+        <name>Robert Rashko</name>
+        <addressInfo>Michel Vally Appt. 34th Ave., PA. USA</addressInfo>
+    </companyname-client>
+</clients>    
+    
+<script src="../node_modules/webcomponents.js/webcomponents.js"></script>
+<script>
+    document.querySelector('#comp1').import;
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<template id="clientInfo">
+<fieldset>
+    <legend>Client Details</legend>
+    <div>Name: <content select="name"></content></div>
+    <div>Address: <content select="addressInfo"></content></div>
+</fieldset>
+</template>
+<script>
+    (function() {
+        "use strict";
+        var clientProto = Object.create(HTMLElement.prototype);
+        var importDoc;
+        if (typeof(document.currentScript) !== 'undefined') {
+            importDoc = document.currentScript.ownerDocument;
+        }
+        else {
+            importDoc = document._currentScript.ownerDocument;
+        }
+        
+        clientProto.createdCallback = function() {
+            var template = importDoc.querySelector('#clientInfo');
+            var shadow = this.createShadowRoot();
+            shadow.appendChild(document.importNode(template.content, true));
+        }
+        
+        document.registerElement('companyname-client', {prototype: clientProto});
+    })();
+</script>
